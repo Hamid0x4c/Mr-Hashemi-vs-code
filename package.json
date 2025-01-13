@@ -1,25 +1,46 @@
 {
-    "name": "mr-hashemi-lang-support",
-    "displayName": "Mr. Hashemi Language Support",
-    "description": "Syntax highlighting for Mr. Hashemi language",
-    "version": "0.0.1",
-    "engines": {
-        "vscode": "^1.41.0"
-    },
-    "categories": [
-        "Programming Languages"
+  "name": "hashemi",
+  "displayName": "hashemi",
+  "description": "Syntax highlighter for hashemi",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/meshya/hashemi-code-extension"
+  },
+  "publisher":"meshya",
+  "scripts": {
+    "test": "vscode-test"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "hashemi",
+        "aliases": [
+          "hashemi",
+          "hashemi"
+        ],
+        "extensions": [
+          ".hashem"
+        ],
+        "configuration": "./language-configuration.json"
+      }
     ],
-    "contributes": {
-        "languages": [{
-            "id": "hashemi",
-            "aliases": ["Mr. Hashemi", "hashemi"],
-            "extensions": [".hashem"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "hashemi",
-            "scopeName": "source.hashem",
-            "path": "./syntaxes/hashemi.tmLanguage.json"
-        }]
-    }
+    "grammars": [
+      {
+        "language": "hashemi",
+        "scopeName": "source.hashemi",
+        "path": "./syntaxes/hashemi.tmLanguage.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
 }
